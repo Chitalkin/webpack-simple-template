@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  background-color: $black;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

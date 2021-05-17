@@ -1,0 +1,9 @@
+html {
+  line-height: $mainLineHeight;
+  font-size: 18px;
+  color: $mainFontColor;
+  height: 100%;
+  @media screen and (max-width: $tabletWidth) {
+        font-size: 16px;
+  }
+}

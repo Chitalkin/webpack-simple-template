@@ -11,6 +11,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         compress: true,
         port: 8085,
         host: 'localhost',
+        open: true,
     },
     plugins: [
         new webpack.SourceMapDevToolPlugin({

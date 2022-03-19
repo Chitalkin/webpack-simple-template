@@ -3,11 +3,14 @@ const baseWebpackConfig = require('./webpack.base.conf');
 
 
 const buildWebpackConfig = merge(baseWebpackConfig, {
-    mode: 'production',
-    plugins: [
-    ]
+  mode: 'production',
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: `${PATHS.assets}css/[name].[contenthash].css`,
+    }),
+  ]
 });
 
 module.exports = new Promise((resolve) => {
-    resolve(buildWebpackConfig);
+  resolve(buildWebpackConfig);
 });

@@ -45,9 +45,6 @@ const config: Configuration = {
             {
                 test: /\.pug$/,
                 loader: '@webdiscus/pug-loader',
-                options: {
-                    pretty: true,
-                },
             },
             {
                 test: /\.(png|jpg|gif|ico|svg)$/,
@@ -107,9 +104,6 @@ const config: Configuration = {
         },
     },
     plugins: [
-        new MiniCssExtractPlugin({
-            filename: `${PATHS.assets}css/[name].css`,
-        }),
         ...PAGES.map(
             (page) =>
                 new HtmlWebpackPlugin({
@@ -117,6 +111,7 @@ const config: Configuration = {
                     filename: `./${page.replace(/\.pug/, '.html')}`,
                     inject: true,
                     src: PATHS.assets,
+                    minify: false,
                 }),
         ),
         new CopyWebpackPlugin({

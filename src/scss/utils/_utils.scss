@@ -3,3 +3,6 @@
 @import './mixins/mixins.scss';
 @import './default-styles/default-styles.scss';
 @import './fonts/fonts';
+// для семантической разметки страницы
+// закомментировать после окончания
+@import './libs/outline';

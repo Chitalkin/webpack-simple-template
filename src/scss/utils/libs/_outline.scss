@@ -1,0 +1,270 @@
+html,
+body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+body {
+  min-width: 430px;
+  border: 2px dashed #c7e4ff;
+}
+
+html::before,
+body::before,
+header::before,
+footer::before,
+main::before {
+  color: #7fc1ff;
+}
+
+main,
+header,
+footer {
+  background-color: #f3faff;
+  border: 2px solid #7fc1ff;
+}
+
+nav,
+section,
+article,
+aside,
+form {
+  background-color: #f9f7ff;
+  border: 2px solid #9779ec;
+}
+
+nav::before,
+section::before,
+article::before,
+form::before,
+aside::before {
+  color: #9779ec;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 18px;
+  background-color: #ffffff;
+  border: 2px solid #ff994f;
+}
+
+h1::before {
+  content: "h1";
+  color: #ff994f;
+}
+
+h2::before {
+  content: "h2";
+  color: #ff994f;
+}
+
+h3::before {
+  content: "h3";
+  color: #ff994f;
+}
+
+h4::before {
+  content: "h4";
+  color: #ff994f;
+}
+
+h5::before {
+  content: "h5";
+  color: #ff994f;
+}
+
+h6::before {
+  content: "h6";
+  color: #ff994f;
+}
+
+img,
+a,
+cite,
+time,
+p,
+blockquote,
+address,
+fieldset,
+ul,
+ol,
+dl,
+dt,
+dd,
+li,
+table,
+video {
+  background-color: #ffffff;
+  border: 2px solid #f36dff;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+p::before {
+  color: #f36dff;
+  content: "p";
+}
+
+blockquote::before {
+  color: #f36dff;
+  content: "blockquote";
+}
+
+address::before {
+  color: #f36dff;
+  content: "address";
+}
+
+fieldset::before {
+  color: #f36dff;
+  content: "fieldset";
+  left: 0;
+}
+
+table::before {
+  color: #f36dff;
+  content: "table";
+}
+
+th,
+td {
+  border: 1px solid #eeeeee;
+  border-radius: 0;
+}
+
+th {
+  border-width: 2px;
+}
+
+* {
+  position: relative;
+  padding: 25px 25px 20px;
+  margin: 0;
+  border-radius: 4px;
+}
+
+*:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+*::before,
+* > *::before,
+* > * > *::before {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 10px;
+  letter-spacing: 0.04em;
+}
+
+html::before {
+  content: "html";
+}
+
+body::before {
+  content: "body";
+}
+
+main::before {
+  content: "main";
+}
+
+header::before {
+  content: "header";
+}
+
+footer::before {
+  content: "footer";
+}
+
+section::before {
+  content: "section";
+}
+
+article::before {
+  content: "article";
+}
+
+form::before {
+  content: "form";
+}
+
+aside::before {
+  content: "aside";
+}
+
+nav::before {
+  content: "nav";
+}
+
+ul::before {
+  content: "ul";
+  color: #f36dff;
+}
+
+li::before {
+  content: "li";
+  color: #f36dff;
+}
+
+dl::before {
+  content: "dl";
+  color: #f36dff;
+}
+
+dt::before {
+  content: "dt";
+  color: #f36dff;
+}
+
+dd::before {
+  content: "dd";
+  color: #f36dff;
+}
+
+a::before {
+  content: "a";
+  color: #f36dff;
+}
+
+cite::before {
+  content: "cite";
+  color: #f36dff;
+}
+
+time::before {
+  content: "time";
+  color: #f36dff;
+}
+
+img {
+  background: rgba(243, 109, 255, 0.1);
+}
+
+a {
+  display: inline-block;
+}
+
+select {
+  padding: 10px;
+}
+
+input {
+  padding: 10px;
+}
+
+textarea {
+  width: 200px;
+  height: 100px;
+}

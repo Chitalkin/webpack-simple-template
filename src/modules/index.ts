@@ -1,2 +1,1 @@
-export const checkTest = () => 'ok';
-console.log('Hello JS!');
+import './svg-sprite';

@@ -4,6 +4,7 @@ import { Configuration } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import SpriteLoaderPlugin from 'svg-sprite-loader/plugin';
 
 const PATHS = {
     src: path.join(__dirname, '../src'),
@@ -54,7 +55,7 @@ const config: Configuration = {
                 loader: '@webdiscus/pug-loader',
             },
             {
-                test: /\.(png|jpg|gif|ico|svg)$/,
+                test: /\.(png|jpg|gif|ico)$/,
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]',
@@ -96,6 +97,19 @@ const config: Configuration = {
                     },
                 ],
             },
+            {
+                test: /\.svg$/,
+                use: [
+                    {
+                        loader: 'svg-sprite-loader',
+                        options: {
+                            extract: true,
+                            spriteFilename: `${PATHS.assets}img/sprite.svg`,
+                        },
+                    },
+                    'svgo-loader',
+                ],
+            },
         ],
     },
     optimization: {
@@ -111,6 +125,9 @@ const config: Configuration = {
         },
     },
     plugins: [
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        new SpriteLoaderPlugin({ plainSprite: true }),
         ...PAGES.map((page) => {
             const pageName = page.replace('.pug', '');
 

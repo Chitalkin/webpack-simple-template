@@ -111,19 +111,18 @@ const config: Configuration = {
         },
     },
     plugins: [
-        ...PAGES.map(
-            (page) =>
-                new HtmlWebpackPlugin({
-                    template: `${PAGES_DIR}/${page.replace(
-                        '.pug',
-                        '',
-                    )}/${page}`,
-                    filename: `./${page.replace(/\.pug/, '.html')}`,
-                    inject: true,
-                    src: PATHS.assets,
-                    minify: false,
-                }),
-        ),
+        ...PAGES.map((page) => {
+            const pageName = page.replace('.pug', '');
+
+            return new HtmlWebpackPlugin({
+                template: `${PAGES_DIR}/${pageName}/${page}`,
+                filename: `./${page.replace(/\.pug/, '.html')}`,
+                inject: true,
+                src: PATHS.assets,
+                pageClass: `${pageName}-page`,
+                minify: false,
+            });
+        }),
         new CopyWebpackPlugin({
             patterns: [
                 {

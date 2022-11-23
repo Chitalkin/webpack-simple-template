@@ -12,9 +12,16 @@ const PATHS = {
 };
 
 const PAGES_DIR = `${PATHS.src}/pug/pages/`;
-const PAGES = fs
-    .readdirSync(PAGES_DIR)
-    .filter((fileName) => fileName.endsWith('.pug'));
+const PAGES = fs.readdirSync(PAGES_DIR).reduce((acc, curr) => {
+    const files = fs.readdirSync(`${PAGES_DIR}/${curr}`);
+    const fileName = files.find((file) => file.endsWith('.pug'));
+
+    if (fileName) {
+        acc.push(fileName);
+    }
+
+    return acc;
+}, [] as string[]);
 
 const config: Configuration = {
     externals: {
@@ -107,7 +114,10 @@ const config: Configuration = {
         ...PAGES.map(
             (page) =>
                 new HtmlWebpackPlugin({
-                    template: `${PAGES_DIR}/${page}`,
+                    template: `${PAGES_DIR}/${page.replace(
+                        '.pug',
+                        '',
+                    )}/${page}`,
                     filename: `./${page.replace(/\.pug/, '.html')}`,
                     inject: true,
                     src: PATHS.assets,

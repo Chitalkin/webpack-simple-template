@@ -6,7 +6,7 @@ doctype html
 html(lang='ru')
     include ./components/head/main-head
 
-    body(class= pageClass)
+    body(class= htmlWebpackPlugin.options.pageClass)
         include ./components/header/main-header
 
         main.page-main

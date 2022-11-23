@@ -132,6 +132,10 @@ const config: Configuration = {
                     from: `${PATHS.src}/video`,
                     to: `${PATHS.assets}video/`,
                 },
+                {
+                    from: `${PATHS.src}/robots.txt`,
+                    to: `${PATHS.dist}/robots.txt`,
+                },
             ],
         }),
     ],

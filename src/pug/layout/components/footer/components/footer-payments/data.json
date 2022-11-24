@@ -1,0 +1,20 @@
+[
+    {
+        "alt": "VISA",
+        "path": "img/footer/payments/visa.jpeg",
+        "width": 200,
+        "height": 50
+    },
+    {
+        "alt": "MasterCard",
+        "path": "img/footer/payments/mastercard.jpeg",
+        "width": 200,
+        "height": 50
+    },
+    {
+        "alt": "MIR",
+        "path": "img/footer/payments/mir.jpeg",
+        "width": 200,
+        "height": 50
+    }
+]

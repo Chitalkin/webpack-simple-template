@@ -1,0 +1,19 @@
+{
+    "social": [
+        {
+            "href": "#",
+            "label": "social-1",
+            "id": "1"
+        },
+        {
+            "href": "#",
+            "label": "social-2",
+            "id": "2"
+        },
+        {
+            "href": "#",
+            "label": "social-3",
+            "id": "3"
+        }
+    ]
+}

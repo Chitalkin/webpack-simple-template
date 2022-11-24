@@ -1,0 +1,5 @@
+- var path = htmlWebpackPlugin.options.src
+
+mixin svg(id, className)
+    svg.icon(class= className || '')
+        use(xlink:href=path + 'img/sprite.svg#' + id)

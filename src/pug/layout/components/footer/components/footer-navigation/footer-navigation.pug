@@ -1,0 +1,10 @@
+- var data = require('./data.json')
+
+.footer-navigation
+    each block in data
+        .footer-navigation__block
+            h4.footer-navigation__title=block.title
+            ul.footer-navigation__list
+                each item in block.items 
+                    li.footer-navigation__item 
+                        a(href=item.href, target="_blank", rel="noopener noreferrer").footer-navigation__link=item.name

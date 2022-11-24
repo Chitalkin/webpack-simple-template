@@ -1,0 +1,25 @@
+- var data = require("./data.json");
+
+.site-panel.container
+    .site-panel__company
+        a(href="/") 
+            img(src=path + "/img/logo.png" width="197" height="136" , alt="Логотип").logo
+
+    .site-panel__interaction
+        ul.social
+            each item in data["social"]
+                li.social__item
+                    a(href=item.href target="_blank" rel="noopener noreferrer" aria-label=item.label ).social__link
+                        +svg(item.id)
+        .user-cart
+            p Корзина пользователя
+        .search
+            input(type="text" placeholder="Поиск по сайту")
+
+    .site-panel__info 
+        p Режим работы
+        a(href="tel:+777777777") 777777777
+        p 
+            span Email:
+            a(href="mailto:google.com")
+        button(type="button") Заказать звонок

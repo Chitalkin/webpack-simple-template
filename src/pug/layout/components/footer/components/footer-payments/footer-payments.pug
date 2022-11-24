@@ -1,0 +1,6 @@
+- var data = require('./data.json')
+
+ul.payments
+    each item in data
+        li.payments__item
+            img(src=path + item.path width=item.width height=item.height , alt=item.alt)

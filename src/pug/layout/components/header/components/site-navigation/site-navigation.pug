@@ -1,0 +1,15 @@
+- var data = require("./data.json");
+
+nav.site-navigation
+    .container
+        button(type="button").site-navigation__toggle
+            | Открыть/закрыть меню
+
+        ul.site-navigation__list
+            each item in data
+                li.site-navigation__item 
+                    a(href=item.href target="_blank" rel="noopener noreferrer").site-navigation__link=item.name
+
+        .site-navigation__user
+            a(href="#" target="_blank" rel="noopener noreferrer") Избранное
+            a(href="#" target="_blank" rel="noopener noreferrer") Сравнение
